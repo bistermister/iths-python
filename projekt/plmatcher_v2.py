@@ -22,13 +22,13 @@ df["time_decimal"] = (
 
 # Välj relevanta features/parametrar från datasetet
 features = [
-    "xg",
-    "xga",
-    "poss",
+    # "xg",
+    # "xga",
+    # "poss",
     "venue",
-    "sh",
-    "sot",
-    "dist",
+    # "sh",
+    # "sot",
+    # "dist",
     "referee",
     "team",
     "time_decimal",
@@ -38,7 +38,8 @@ X = df[features]
 y = df["result_numeric"]
 
 # Numeriska variabler
-numerical_features = ["xg", "xga", "poss", "sh", "sot", "dist", "time_decimal"]
+# numerical_features = ["xg", "xga", "poss", "sh", "sot", "dist", "time_decimal"]
+numerical_features = ["time_decimal"]
 numerical_transformer = SimpleImputer(strategy="mean")
 
 # Kategoriska variabler
